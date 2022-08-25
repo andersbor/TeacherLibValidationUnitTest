@@ -19,6 +19,15 @@ namespace TeacherLibValidationUnitTEst.Tests
         }
 
         [TestMethod()]
+        [DataRow(0)]
+        [DataRow(10)]
+        [DataRow(8)]
+        public void ValidateSalariesTest(int value)
+        {
+            TeacherValidator.ValidateSalary(value);
+        }
+
+        [TestMethod()]
         public void ValidateNameTest()
         {
             TeacherValidator.ValidateName("Y");
